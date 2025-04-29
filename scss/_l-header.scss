@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   padding: 40px 0;
   background-color: #ffffff;
 
@@ -80,7 +85,12 @@
     &-link {
       font-weight: 400;
       font-size: 16px;
-      color: #000;
+      color: #000000;
+      transition: color ease-out 0.2s;
+
+      &:hover {
+        color: #a21847;
+      }
     }
   }
 
