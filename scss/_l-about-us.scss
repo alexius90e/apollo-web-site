@@ -1,0 +1,125 @@
+.about-us {
+  margin: 16px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__figure {
+    flex: 0 0 calc(100% / 2 - 20px / 2);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 12px;
+
+    @include desktop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    @include laptop {
+      flex: 1 1 100%;
+      order: 1;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include laptop {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    flex: 0 0 calc(100% / 2 - 20px / 2);
+    min-height: 666px;
+    padding: 160px 80px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #f1f1f1;
+
+    @include desktop {
+      min-height: 540px;
+      padding: 160px 40px;
+    }
+
+    @include laptop {
+      flex: 1 1 100%;
+      order: 0;
+      min-height: auto;
+      padding: 40px 40px 8px;
+    }
+
+    &-title {
+      margin: 0 0 220px;
+      font-weight: 600;
+      font-size: 64px;
+      color: #a21847;
+
+      @include desktop {
+        margin-bottom: 100px;
+        font-size: 48px;
+      }
+
+      @include laptop {
+        margin: 0 0 40px;
+        font-size: 36px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    &-slider {
+      display: grid;
+
+      & .swiper {
+        max-width: 100%;
+
+        &-wrapper {
+          min-width: 0;
+
+          @include laptop {
+            padding: 0 0 40px;
+          }
+        }
+
+        &-pagination {
+          display: none;
+
+          @include laptop {
+            display: block;
+          }
+
+          &-bullet {
+            background-color: #aeaeae;
+          }
+        }
+      }
+
+      &-slide {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

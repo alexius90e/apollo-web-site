@@ -6,6 +6,8 @@
     <title>Apollo</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <script src="./js/swiper-bundle.min.js" defer></script>
     <script type="module" src="./js/index.js" defer></script>
   </head>
 
@@ -29,16 +31,15 @@
             <a class="header__nav-link" href="#">Контакты</a>
           </nav>
 
-          <di class="header__controls">
+          <div class="header__controls">
             <button class="header__controls-search"></button>
             <button class="header__controls-location"></button>
-          </di>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="main">
-
       <section class="about-page">
         <div class="container">
           <div class="breadcrumbs">
@@ -49,11 +50,63 @@
           <h2 class="about-page__title">О компании</h2>
 
           <figure class="about-page__banner">
-            <img class="about-page__banner-bg" src="./assets/about-page-bg.jpg" alt="bg">
-            <img class="about-page__banner-logo" src="./assets/logo-full.svg" alt="logo">
+            <img class="about-page__banner-bg" src="./assets/about-page-bg.jpg" alt="bg" />
+            <img class="about-page__banner-logo" src="./assets/logo-full.svg" alt="logo" />
           </figure>
+
+          <section class="about-us">
+            <div class="about-us__wrapper">
+              <figure class="about-us__figure">
+                <img
+                  class="about-us__figure-image"
+                  src="./assets/about-us-img.jpg"
+                  alt="about-us"
+                />
+              </figure>
+
+              <div class="about-us__info">
+                <h3 class="about-us__info-title">О компании</h3>
+
+                <div class="about-us__info-slider">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="about-us__info-slider-slide">
+                          Основание компании – это один из наиболее важных моментов в жизни любого
+                          бизнесмена. Оно является отправной точкой для создания собственного дела,
+                          от которой зависит дальнейший успех и развитие компании. Основание
+                          компании – это решение о начале своей деловой жизни, которое составляется
+                          на основании многих факторов и принимается неспешно и взвешенно.
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="about-us__info-slider-slide">
+                          Приоритетом для нас является качество наших услуг. Мы уделяем особое
+                          внимание деталям, чтобы удовлетворить высокие стандарты наших клиентов и
+                          превзойти их ожидания. Мы предлагаем индивидуальный подход к каждому
+                          клиенту, учитывая их уникальные потребности и цели. Мы регулярно обновляем
+                          наши навыки и знания, чтобы оставаться в лидерах отрасли и обеспечивать
+                          превосходное качество услуг.
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="about-us__info-slider-slide">
+                          Наша компания активно участвует в социально-ответственных проектах,
+                          стремясь создавать благоприятные условия для жизни и развития сообщества.
+                          Мы придерживаемся ценностей этики и устойчивого развития, уделяя внимание
+                          экологической безопасности и социальной ответственности.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section> 
+      </section>
     </main>
 
     <footer class="footer">
