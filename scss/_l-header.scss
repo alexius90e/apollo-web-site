@@ -1,2 +1,121 @@
 .header {
+  padding: 40px 0;
+  background-color: #ffffff;
+
+  @include laptop {
+    padding: 16px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+
+    @include laptop {
+      gap: 16px;
+    }
+  }
+
+  &__burger {
+    flex: 0 0 auto;
+    order: 0;
+
+    @include laptop {
+      order: 2;
+    }
+
+    &-button {
+      display: block;
+      width: 24px;
+      padding: 0;
+      box-sizing: border-box;
+      aspect-ratio: 1 / 1;
+      border: none;
+      outline: none;
+      background: url(../assets/burger.svg) center / cover no-repeat;
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    order: 1;
+    width: fit-content;
+
+    @include laptop {
+      order: 0;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 110px;
+        height: auto;
+
+        @include laptop {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    order: 2;
+    gap: 60px;
+
+    @include laptop {
+      display: none;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    order: 3;
+    gap: 24px;
+
+    @include laptop {
+      justify-content: flex-end;
+      flex: 1 0 auto;
+      order: 1;
+      gap: 16px;
+    }
+
+    &-search,
+    &-location {
+      display: block;
+      width: 24px;
+      padding: 0;
+      box-sizing: border-box;
+      aspect-ratio: 1 / 1;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &-search {
+      background: url(../assets/magnifying-glass.svg) center / cover no-repeat;
+    }
+
+    &-location {
+      background: url(../assets/map-pin.svg) center / cover no-repeat;
+    }
+  }
 }
