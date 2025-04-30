@@ -1,4 +1,4 @@
-const swiper = new Swiper('.about-us .swiper', {
+const aboutUsSwiper = new Swiper('.about-us .swiper', {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 24,
@@ -7,5 +7,18 @@ const swiper = new Swiper('.about-us .swiper', {
   },
   pagination: {
     el: '.swiper-pagination',
+  },
+});
+
+const designDepartmentSwiper = new Swiper('.design-department .swiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 48,
+  autoplay: {
+    delay: 2000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
