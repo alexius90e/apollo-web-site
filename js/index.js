@@ -11,7 +11,6 @@ const aboutUsSwiper = new Swiper('.about-us .swiper', {
 });
 
 const designDepartmentSwiper = new Swiper('.design-department .swiper', {
-  loop: true,
   slidesPerView: 1,
   spaceBetween: 48,
   autoplay: {
