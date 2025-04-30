@@ -1,0 +1,140 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: rgba($color: #000000, $alpha: 0);
+  pointer-events: none;
+
+  &.active {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    pointer-events: all;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 517px;
+    padding: 40px 80px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transform: translateX(-100vh);
+    transition: transform ease-out 0.4s;
+
+    @include mobile {
+      right: 0;
+      max-width: none;
+      padding: 40px 32px;
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+
+      &-logo {
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 110px;
+          height: auto;
+        }
+      }
+
+      &-close {
+        &-button {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          padding: 0;
+          border: none;
+          outline: none;
+          background: url(../assets/close.svg) center / cover no-repeat;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.active &__body {
+    transform: translateX(0);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-height: calc(100dvh - 164px);
+    overflow: auto;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      flex: 1 1 100%;
+
+      &-link {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+        transition: color ease-out 0.1s;
+
+        &:hover {
+          color: #a21847;
+        }
+      }
+    }
+
+    &-item > & {
+      display: none;
+      padding-left: 16px;
+    }
+
+    & > &-item.active > & {
+      display: flex;
+    }
+
+    &-title {
+      flex: 1 1 100%;
+      font-weight: 400;
+      font-size: 20px;
+      color: #000;
+      transition: all ease-out 0.1s;
+      cursor: pointer;
+
+      &:hover {
+        color: #a21847;
+      }
+    }
+  }
+
+  &__wrapper > &__menu &__menu-item.active > &__menu-title {
+    font-weight: 700;
+    color: #000;
+  }
+
+  &__wrapper > &__menu > &__menu-item.active > &__menu-title {
+    font-weight: 600;
+    font-size: 36px;
+    color: #a21847;
+  }
+}
