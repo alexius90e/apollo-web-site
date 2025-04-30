@@ -1,2 +1,177 @@
 .footer {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 40px 32px;
+    padding-left: 190px;
+    border-radius: 12px;
+    background-color: #a21847;
+
+    @include laptop {
+      flex-direction: column;
+      padding: 40px 32px;
+    }
+
+    @include mobile {
+      gap: 24px;
+      padding: 24px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 40px;
+    left: 32px;
+    z-index: 5;
+    flex: 0 0 auto;
+    width: fit-content;
+
+    @include laptop {
+      position: static;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 110px;
+        height: auto;
+        filter: brightness(0%) invert(1);
+
+        @include laptop {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 40px;
+    flex: 1 1 auto;
+
+    @include laptop {
+      justify-content: space-between;
+      flex: 0 1 auto;
+      width: 100%;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      max-width: 220px;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      @include mobile {
+        flex: 0 0 calc(100% / 2 - 24px / 2 );
+        max-width: none;
+      }
+
+      &_partners {
+        @include mobile {
+          flex: 1 1 100%;
+        }
+      }
+
+      &-title {
+        margin: 0 0 16px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+
+        @include mobile {
+          margin: 0 0 4px;
+          font-size: 16px;
+        }
+      }
+
+      &-item {
+        font-weight: 400;
+        font-size: 16px;
+        color: #fff;
+
+        @include mobile {
+          font-size: 14px;
+        }
+
+        &-link {
+          color: inherit;
+        }
+      }
+
+      &_partners &-item {
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/arrow-up-right.svg) center / cover no-repeat;
+            transition: transform ease-out 0.2s;
+          }
+
+          &:hover::after {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 40px;
+    left: 32px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include laptop {
+      position: static;
+    }
+
+    @include mobile {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 45px;
+      aspect-ratio: 1 / 1;
+
+      &-icon {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
