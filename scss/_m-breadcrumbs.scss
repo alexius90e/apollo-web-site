@@ -28,6 +28,8 @@
   }
 
   &__link {
+    display: flex;
+    align-items: stretch;
     transition: color ease-out 0.2s;
 
     &:hover {

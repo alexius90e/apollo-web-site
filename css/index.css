@@ -78,6 +78,12 @@ img {
   }
 }
 .breadcrumbs__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-transition: color ease-out 0.2s;
   transition: color ease-out 0.2s;
 }
@@ -451,20 +457,20 @@ img {
 }
 
 .about-page__title {
-  margin: 32px 0 60px;
+  margin: 0 0 60px;
   font-weight: 600;
   font-size: 64px;
   color: #000;
 }
 @media (max-width: 992px) {
   .about-page__title {
-    margin: 22px 0 48px;
+    margin: 0 0 48px;
     font-size: 48px;
   }
 }
 @media (max-width: 576px) {
   .about-page__title {
-    margin: 12px 0 30px;
+    margin: 0 0 30px;
     font-size: 36px;
   }
 }
